@@ -6,3 +6,10 @@ export const addAddress = address => {
     address
   };
 };
+export const editAddress = (id, updates) => {
+  return {
+    type: "EDIT_ADDRESS",
+    id,
+    updates
+  };
+};

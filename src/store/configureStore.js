@@ -2,7 +2,6 @@ import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import authReducer from "../reducers/auth";
 import addressesReducer from "../reducers/addresses";
-import uuid from "uuid";
 
 //Store creation
 
@@ -20,7 +19,7 @@ export default () => {
   const addressOne = {
     type: "ADD_ADDRESS",
     address: {
-      id: uuid(),
+      id: "3dd48f44-225d-414b-959b-54fa53edadb6",
       street: "One Street",
       town: "One Town",
       postcode: "PO57COD",
@@ -30,7 +29,7 @@ export default () => {
   const addressTwo = {
     type: "ADD_ADDRESS",
     address: {
-      id: uuid(),
+      id: "0a6bbfcc-8f97-4f4a-9205-d91d240b70bf",
       street: "Two Street",
       town: "TwoTown",
       postcode: "PO57COD",

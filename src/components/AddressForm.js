@@ -2,13 +2,15 @@ import React, { Component } from "react";
 import uuid from "uuid";
 
 class AddressForm extends Component {
-  state = {
-    id: this.props.address ? this.props.address.id : uuid(),
-    street: this.props.address ? this.props.address.street : "",
-    town: this.props.address ? this.props.address.town : "",
-    postcode: this.props.address ? this.props.address.postcode : "",
-    country: this.props.address ? this.props.address.country : ""
-  };
+  constructor(props) {
+    super();
+    this.state = {
+      street: props.address ? props.address.street : "",
+      town: props.address ? props.address.town : "",
+      postcode: props.address ? props.address.postcode : "",
+      country: props.address ? props.address.country : ""
+    };
+  }
 
   onSubmit = e => {
     e.preventDefault();
@@ -37,6 +39,7 @@ class AddressForm extends Component {
   };
 
   render() {
+    console.log(this.props, this.state);
     return (
       <form onSubmit={this.onSubmit} className="form">
         <div>
@@ -45,6 +48,7 @@ class AddressForm extends Component {
             onChange={this.onStreetChange}
             placeholder="Street"
             type="text"
+            value={this.state.street}
           />
         </div>
         <div>
@@ -53,6 +57,7 @@ class AddressForm extends Component {
             onChange={this.onTownChange}
             placeholder="Town"
             type="text"
+            value={this.state.town}
           />
         </div>
         <div>
@@ -61,6 +66,7 @@ class AddressForm extends Component {
             onChange={this.onPostcodeChange}
             placeholder="Postcode"
             type="text"
+            value={this.state.postcode}
           />
         </div>
         <div>
@@ -69,9 +75,10 @@ class AddressForm extends Component {
             onChange={this.onCountryChange}
             placeholder="Country"
             type="text"
+            value={this.state.country}
           />
         </div>
-        <button className="button">Add address</button>
+        <button className="button">Save address</button>
       </form>
     );
   }

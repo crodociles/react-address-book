@@ -1,7 +1,7 @@
 import React from "react";
-import AddressesListItem from "./AddressesListItem";
 import { connect } from "react-redux";
 import { addAddress } from "../actions/addresses";
+import AddressesListItem from "./AddressesListItem";
 
 const AddressesList = props => (
   <div className="content-container">

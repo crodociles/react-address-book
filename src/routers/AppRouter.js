@@ -5,6 +5,7 @@ import AddAddressPage from "../components/AddAddressPage";
 import DashboardPage from "../components/DashboardPage";
 import NotFoundPage from "../components/NotFoundPage";
 import LoginPage from "../components/LoginPage";
+import EditAddressPage from "../components/EditAddressPage";
 import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
 
@@ -17,6 +18,7 @@ const AppRouter = () => (
         <PublicRoute path="/" component={LoginPage} exact={true} />
         <PrivateRoute path="/dashboard" component={DashboardPage} />
         <PrivateRoute path="/create" component={AddAddressPage} />
+        <PrivateRoute path="/edit/:id" component={EditAddressPage} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>

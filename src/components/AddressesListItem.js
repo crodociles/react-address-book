@@ -1,11 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const AddressesListItem = props => (
+const AddressesListItem = ({ id, street, town, postcode, country }) => (
   <div>
-    <span>{props.street}</span>
-    <span>{props.town}</span>
-    <span>{props.postcode}</span>
-    <span>{props.country}</span>
+    <Link to={`/edit/${id}`}>
+      <span>{street}</span>
+      <span>{town}</span>
+      <span>{postcode}</span>
+      <span>{country}</span>
+    </Link>
   </div>
 );
 
