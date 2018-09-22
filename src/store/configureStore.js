@@ -20,20 +20,20 @@ export default () => {
     type: "ADD_ADDRESS",
     address: {
       id: "3dd48f44-225d-414b-959b-54fa53edadb6",
-      street: "One Street",
-      town: "One Town",
-      postcode: "PO57COD",
-      country: "Example"
+      street: "Grosvenor Lane",
+      town: "Skegaville",
+      postcode: "OP34 EDC",
+      country: "United Kingdom"
     }
   };
   const addressTwo = {
     type: "ADD_ADDRESS",
     address: {
       id: "0a6bbfcc-8f97-4f4a-9205-d91d240b70bf",
-      street: "Two Street",
-      town: "TwoTown",
-      postcode: "PO57COD",
-      country: "Example"
+      street: "Lansdowne Avenue",
+      town: "Burghly Marsh",
+      postcode: "DE39 DER",
+      country: "United Kingdom"
     }
   };
 

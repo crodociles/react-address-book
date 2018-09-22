@@ -2,10 +2,13 @@ import React, { Component } from "react";
 import AddressForm from "./AddressForm";
 import { connect } from "react-redux";
 import { addAddress } from "../actions/addresses";
+import uuid from "uuid";
 
 class AddAddressPage extends Component {
   state = {};
   onSubmit = address => {
+    address.id = uuid();
+    console.log(address);
     this.props.addAddress(address);
     this.props.history.push("/");
   };
