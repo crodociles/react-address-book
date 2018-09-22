@@ -78,7 +78,7 @@ class AddressForm extends Component {
             value={this.state.country}
           />
         </div>
-        <button className="button">Save address</button>
+        <button className="button">Save Address</button>
       </form>
     );
   }

@@ -15,6 +15,8 @@ export default (state = [], action) => {
           return address;
         }
       });
+    case "REMOVE_ADDRESS":
+      return state.filter(({ id }) => id !== action.id);
     default:
       return state;
   }
